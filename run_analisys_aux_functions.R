@@ -78,7 +78,7 @@ reshape <- function(){
 #
 filter_mean_std <- function(){
   
-  features <- read.table("features.txt")
+  features <- read.table("UCI HAR Dataset/features.txt")
   rowsToExtract <- features[grep(".*-(mean|std)\\(\\)",features$V2),]
   
   features_df <- read.table("merge/X_merge.txt")

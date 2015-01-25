@@ -1,7 +1,5 @@
 library(data.table)
 
-setwd("~/Documents/desarrollo/coursera/Getting_cleaning_data/peer assessment/UCI HAR Dataset/Getting_Cleaning_Data_Peer_Assessment")
-
 # Reads the auxiliary functions
 source("run_analisys_aux_functions.R")
 
@@ -12,8 +10,8 @@ source("run_analisys_aux_functions.R")
 # This is only a raw merge of the files. They preserve their original format yet.
 #
 
-train_root_dir_name <- "train"
-test_root_dir_name <- "test"
+train_root_dir_name <- "UCI HAR Dataset/train"
+test_root_dir_name <- "UCI HAR Dataset/test"
 merge_root_dir_name <- "merge"
 default_files_to_retrieve_pattern <- "\\.txt$"
 
@@ -32,7 +30,7 @@ traverse_files_rule_engine(train_root_dir_name,
 #
 merged_and_reshaped_ds <- reshape()
 
-write.table(merged_and_reshaped_ds, paste(c(merge_root_dir_name,"/","merged"), collapse = ""), sep="\t", row.names=TRUE, col.names=TRUE)
+write.table(merged_and_reshaped_ds, paste(c(merge_root_dir_name,"/","merged.txt"), collapse = ""), sep="\t", row.names=TRUE, col.names=TRUE)
 
 ## Part 5 -> CREATES THE FINAL TIDY DATA SET
 #
