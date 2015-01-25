@@ -26,3 +26,9 @@ As a result of the steps above (2,3,4) you can see in the merge generated direct
 As a result of this final step you can see within the merge generated directory this new dataset:
 
 - tidy.txt
+
+## Variables
+
+- subject: identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- activity: a factor with the activity name.
+- subset containing all the variables related with the mean and the std from the features.txt list in the original dataset

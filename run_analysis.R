@@ -39,4 +39,4 @@ write.table(merged_and_reshaped_ds, paste(c(merge_root_dir_name,"/","merged.txt"
 
 tidy_data_set <- create_tidy_dataset(merged_and_reshaped_ds)
 
-write.table(tidy_data_set, paste(c(merge_root_dir_name,"/","tidy",".txt"), collapse = ""), sep="\t", row.names=TRUE, col.names=TRUE)
+write.table(tidy_data_set, paste(c(merge_root_dir_name,"/","tidy",".txt"), collapse = ""), sep="\t", row.names=FALSE, col.names=TRUE)
